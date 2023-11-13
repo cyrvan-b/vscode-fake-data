@@ -14,8 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "vscode-fake-data.helloWorld",
-        "title": "Hello World"
+        "command": "vscode-fake-data.fake",
+        "title": "Fake: Generate Data"
       }
     ]
   },
