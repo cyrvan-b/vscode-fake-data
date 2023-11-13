@@ -14,8 +14,12 @@
   "contributes": {
     "commands": [
       {
-        "command": "vscode-fake-data.fake.uuid",
+        "command": "vsf.fake.uuid",
         "title": "Fake: Uuid"
+      },
+      {
+        "command": "vsf.fake.fullname",
+        "title": "Fake: Full Name"
       }
     ]
   },
