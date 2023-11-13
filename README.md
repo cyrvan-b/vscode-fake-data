@@ -1,2 +1,3 @@
-# vscode-fake-data
+# VSCODE FAKE DATA
+
 Quickly insert fake data within documents.
