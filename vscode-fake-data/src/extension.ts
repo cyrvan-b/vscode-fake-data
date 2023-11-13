@@ -1,11 +1,11 @@
 // The module 'vscode' contains the VS Code extensibility API
 import * as vscode from 'vscode';
+import { faker } from '@faker-js/faker';
 
 export function activate(context: vscode.ExtensionContext) {
-	let disposable = vscode.commands.registerTextEditorCommand('vscode-fake-data.fake', (editor, edit) => {
-		editor.selections.forEach((selection, i) => {
-			let text = "FooBar " + i;
-			edit.insert(selection.active, text);
+	let disposable = vscode.commands.registerTextEditorCommand('vscode-fake-data.fake.uuid', async (editor, edit) => {
+		editor.selections.forEach((selection) => {
+			edit.insert(selection.active, faker.string.uuid());
 		});
 	});
 	context.subscriptions.push(disposable);

@@ -14,8 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "vscode-fake-data.fake",
-        "title": "Fake: Generate Data"
+        "command": "vscode-fake-data.fake.uuid",
+        "title": "Fake: Uuid"
       }
     ]
   },
