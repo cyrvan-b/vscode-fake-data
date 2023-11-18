@@ -8,7 +8,6 @@ export function activate(context: vscode.ExtensionContext) {
 		['vsf.fake.fullname', faker.person.fullName],
 		['vsf.fake.paragraph', faker.lorem.paragraph],
 		['vsf.fake.words', faker.lorem.words],
-		['vsf.fake.avatar', faker.image.avatar],
 	];
 
 	context.subscriptions.push(
@@ -19,6 +18,17 @@ export function activate(context: vscode.ExtensionContext) {
 				});
 			});
 		})
+	);
+	context.subscriptions.push(
+		vscode.commands.registerTextEditorCommand('vsf.fake.picture.run', (editor, edit, x='120') => {
+			editor.selections.forEach((selection) => {
+				edit.insert(selection.active, `https://picsum.photos/${x}/${x}`);
+			});
+		}),
+		vscode.commands.registerCommand('vsf.fake.picture', async () => {
+			const x = await vscode.window.showInputBox({ placeHolder: 'Size: ' });
+			vscode.commands.executeCommand('vsf.fake.picture.run', x);
+		}),
 	);
 }
 

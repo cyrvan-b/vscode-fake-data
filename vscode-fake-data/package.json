@@ -37,6 +37,10 @@
       {
         "command": "vsf.fake.avatar",
         "title": "Fake: Avatar"
+      },
+      {
+        "command": "vsf.fake.picture",
+        "title": "Fake: Picture"
       }
     ]
   },
