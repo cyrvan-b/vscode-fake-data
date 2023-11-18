@@ -3,8 +3,12 @@
   "displayName": "vscode-fake-data",
   "description": "Generate fake data for testing purpose.",
   "version": "1.0.0",
+  "publisher": "cbouchard",
   "engines": {
     "vscode": "^1.84.0"
+  },
+  "repository": {
+    "url": "https://github.com/cyrvan-b/vscode-fake-data"
   },
   "categories": [
     "Snippets",
