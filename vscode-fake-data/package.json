@@ -2,11 +2,12 @@
   "name": "vscode-fake-data",
   "displayName": "vscode-fake-data",
   "description": "Generate fake data for testing purpose.",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.84.0"
   },
   "categories": [
+    "Snippets",
     "Other"
   ],
   "activationEvents": [],
@@ -20,6 +21,18 @@
       {
         "command": "vsf.fake.fullname",
         "title": "Fake: Full Name"
+      },
+      {
+        "command": "vsf.fake.paragraph",
+        "title": "Fake: Paragraph"
+      },
+      {
+        "command": "vsf.fake.words",
+        "title": "Fake: Words"
+      },
+      {
+        "command": "vsf.fake.avatar",
+        "title": "Fake: Avatar"
       }
     ]
   },
@@ -29,7 +42,9 @@
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
+    "test": "node ./out/test/runTest.js",
+    "package": "vsce package",
+    "publish": "vsce package && vsce publish"
   },
   "devDependencies": {
     "@types/vscode": "^1.84.0",
